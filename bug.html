@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Incorrectly using innerHTML to set content,
+    // leading to unexpected behavior if the content contains HTML tags.
+    document.getElementById('myDiv').innerHTML = "<p>This is a paragraph.</p> <p> This is another paragraph.</p>"; 
+    //This will overwrite any previous content and break the page if not set carefully
+  </script>
+</body>
+</html>
